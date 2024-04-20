@@ -9,15 +9,15 @@ WIN = pygame.display.set_mode((WIDTH, WIDTH)) # stvorcovy rozmer
 pygame.display.set_caption("A* Snake Hunting It's Prey")
 
 # deklaracia farieb
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 255, 0)
-YELLOW = (255, 255, 0)
+RED = (255, 0, 0)           
+GREEN = (0, 255, 0)         
+BLUE = (0, 255, 0)          
+YELLOW = (255, 255, 0)      
 WHITE = (255, 255, 255)     # prazdny priestor
 BLACK = (0, 0, 0)           # steny/prekazky
 PURPLE = (128, 0, 128)      # cesta
 ORANGE = (255, 165 ,0)      # start
-GREY = (128, 128, 128)
+GREY = (128, 128, 128)      # gridlines
 TURQUOISE = (66, 222, 2010) # konec/korist
 
 class Node:
@@ -79,3 +79,14 @@ class Node:
     # less than metoda, ktora vzdy vyhodnoti ze kazdy aktualny uzol je mensi nez susedny uzol
     def __lt__(self, other):
         return False
+
+# heuristicka funkcia:
+    # Manhattan Distance
+    def h(p1, p2):
+        x1, y1 = p1
+        x2, y2 = p2
+        return abs(x2 - x1) + (y2 - y1)
+
+    # Euclid Distance
+    # TODO
+
