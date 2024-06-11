@@ -1,0 +1,3 @@
+([('astar_snake',
+   '/Users/danieldlugos/Documents/school/4rok/LS/uni_but_fme_VAI/Asnake/dist/astar_snake',
+   'EXECUTABLE')],)
